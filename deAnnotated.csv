@@ -1,0 +1,5 @@
+"","ko","log2FoldChange","padj","Factor","trans"
+"1","ko:K13785",-2.91055815842813,2.08945814662827e-06,"Menthol_Menthol_vs_Control","TRINITY_DN6662_c0_g1_i1"
+"2","ko:K13785",-2.91055815842813,2.08945814662827e-06,"Menthol_Menthol_vs_Control","TRINITY_DN8846_c0_g1_i1"
+"3","ko:K14965",-6.86805583916011,1.07128281235537e-13,"Menthol_Menthol_vs_Control","TRINITY_DN8173_c0_g1_i1"
+"4","ko:K17920",0.838143182884639,0.00710201642983557,"Menthol_Menthol_vs_Control","TRINITY_DN9347_c0_g1_i1"
