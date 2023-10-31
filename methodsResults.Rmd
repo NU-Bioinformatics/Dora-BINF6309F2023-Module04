@@ -1,0 +1,32 @@
+---
+title: "DE Analysis of Aiptasia RNA-seq Experiment"
+author: "Isidora Beslic"
+date: '2023-10-29'
+output: 
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+---
+
+## Methods
+### 1. Write shell script to build Salmon index from the de-novo Aiptasia transcriptome available on Discovery. Generates AipIndex directory.
+### 2. Write shell script to perform Salmon abundance estimation of Aip experimental samples available on Discovery. Aligns all samples to AipIndex and performs abundance estimation. Generates quant directory in results directory.
+### 3. Write an R script to create a transcript to gene table using annotation files available on Discovery. Generates tx2gene.csv in results directory.
+### 4. Write an R script to import Salmon alignments into "DEseq2" and perform differential expression analysis. Generates deAnnotated.csv in the results directory, a csv file of statistically significant differentially expressed transcripts and their KEGG orthology ids.
+
+## Results
+```{r}
+library(knitr)
+RESULTS_DIR <- "/home/beslic.i/BINF6309/module04/results"
+results <- read.csv(file.path(RESULTS_DIR, "deAnnotated.csv"))
+kable(results)
+```
+
+## References
+### Love, Michael I., Wolfgang Huber, and Simon Anders. 2014. “Moderated Estimation of Fold Change and Dispersion for RNA-Seq Data with DESeq2.” *Genome Biol* 15 (12): 550–50.
+
+### Patro, Rob, Geet Duggal, Michael I. Love, Rafael A. Irizarry, and Carl Kingsford. 2017. “Salmon Provides Fast and Bias-Aware Quantification of Transcript Expression.” *Nat Methods* 14 (4): 417–19.
+
+### Soneson, Charlotte, Michael I. Love, and Mark D. Robinson. 2016. “Differential Analyses for RNA-Seq: Transcript-Level Estimates Improve Gene-Level Inferences.” *F1000Res* 4 (February): 1521–1.
+
